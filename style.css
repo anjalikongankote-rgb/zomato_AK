@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Background video */
+  .video {
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay on top of video */
+  .video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* black with 50% opacity */
+    z-index: -1;
+  }
+  
+  /* Centered text and download buttons */
+  .text {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .text h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 17px;
+  }
+  
+  .text span{
+    font-size: 50px;
+    /* margin-bottom: px; */
+    /* padding-bottom: 50px; */
+    font-weight: bold;
+  }
+  .side{
+    font-size: 22px;
+    padding-top: 25px;
+  }
+  
+  .download {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+  }
+  
+  .download img {
+    width: 230px;
+    height: 80px;
+    /* padding: 8px 12px; */
+    /* border: 2px solid white; */
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .download img:hover {
+    transform: scale(1.05);
+    border-color: #ff4d4d;
+  }
+  
+  /* Scrollable content sections */
+  .content {
+    position: relative;
+    z-index: 1;
+    margin-top: 100vh;
+    /* push content below the full-screen video */
+    background: #f8f4f4;
+    padding: 50px 20px;
+  }
+  
+  .section {
+    margin-bottom: 50px;
+    align-items: center;
+
+  }
+  
+  .section h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: #333;
+    align-content: center;
+    justify-content: center;
+    padding-left: 40%;
+  }
+  
+  /* Cards inside sections */
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #bca0a0;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    /* adjust as needed */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card p {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Hover effect */
+  .card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .footer {
+    background: #222;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-left h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .footer-left p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #bbb;
+  }
+  
+  .footer-links a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ff4757;
+    /* Zomato red vibe */
+  }
+  
+  .footer-social a img {
+    width: 25px;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social a img:hover {
+    transform: scale(1.2);
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #ff4757;
+    /* Zomato red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background: #e84118;
+    transform: scale(1.1);
+  }
